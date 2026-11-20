@@ -1,0 +1,16 @@
+{
+  "name": "tryon",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Virtual Try-On: نظارات، حلق، عقود وميك أب بالكاميرا (React + MediaPipe + Express)",
+  "scripts": {
+    "setup": "npm install && npm --prefix client install && npm --prefix server install && node scripts/setup-env.mjs",
+    "dev": "concurrently -n server,client -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build && npm --prefix server run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
